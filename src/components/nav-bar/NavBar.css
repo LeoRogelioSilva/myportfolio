@@ -1,0 +1,89 @@
+nav {
+  background-color: #000;
+  padding: 20px;
+}
+
+.navitens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.socialLinks {
+  position: absolute;
+  left: 0;
+}
+.socialLinks a {
+  margin: 0.4rem;
+}
+.socialLinks a img {
+  width: 2rem;
+}
+
+.centerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerImage img {
+  width: 6rem;
+}
+
+.internalLinks {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+.internalLinks h2 {
+  font-size: 1rem;
+}
+
+.internalLinks a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.internalLinks a:hover {
+  color: #f60;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebarOpen {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .navitens {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .centerImage {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  .socialLinks {
+    display: block;
+  }
+
+  .internalLinks {
+    display: none; /* Oculta os elementos desnecessários no sidebar */
+  }
+}

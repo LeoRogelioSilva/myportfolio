@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.css";
+import NavBar from "./components/nav-bar/NavBar";
+import Profile from "./components/profile/Profile";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <div className="carousel">teste</div>
+      <NavBar></NavBar>
+      <Profile></Profile>
     </div>
   );
 };

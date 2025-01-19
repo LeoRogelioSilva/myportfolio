@@ -1,0 +1,96 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.about {
+  color: white;
+  justify-content: left;
+  margin: auto;
+  align-items: left;
+  text-align: left;
+  max-width: 40%;
+}
+
+.about h2 {
+  color: white;
+}
+
+.about h1 {
+  color: #f60;
+}
+
+.photo {
+  display: flex;
+  margin-left: auto;
+  margin-right: 15%;
+  margin-top: 5%;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo img {
+  position: absolute;
+  bottom: 0;
+  width: 20vw;
+  right: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  /* Ajuste o valor de 768px conforme necessário */
+  .photo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 50%;
+    width: 70vw;
+    height: 70vw;
+    position: relative; /* Necessário para posicionar o ::after */
+    display: inline-block;
+    width: 70vw; /* Ajusta conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    overflow: hidden;
+  }
+
+  .photo img {
+    position: absolute;
+    bottom: 0;
+    width: 70vw;
+    right: 0%;
+    position: relative;
+  }
+
+  .photo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0)
+    ); /* Gradiente do topo para baixo */
+    pointer-events: none; /* Permite clicar na imagem sem interferência */
+    z-index: 1; /* Garante que a máscara esteja acima da imagem */
+  }
+
+  .about {
+    max-width: 90%; /* Opcional: ajustar a largura do texto para ocupar mais espaço */
+  }
+}
