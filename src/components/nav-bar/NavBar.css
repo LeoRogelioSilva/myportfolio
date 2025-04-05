@@ -1,5 +1,6 @@
 nav {
-  background-color: #000;
+  background-color: var(--background-color);
+  color: var(--text-color);
   padding: 20px;
 }
 
@@ -32,6 +33,12 @@ nav {
   width: 6rem;
 }
 
+.navitens button {
+  position: absolute;
+  right: 22vw;
+  display: flex;
+}
+
 .internalLinks {
   position: absolute;
   right: 0;
@@ -43,13 +50,13 @@ nav {
 }
 
 .internalLinks a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   margin: 0 1rem;
 }
 
 .internalLinks a:hover {
-  color: #f60;
+  color: var(--accent-color);
 }
 
 .menuToggle {
@@ -63,6 +70,20 @@ nav {
 
 .sidebarOpen {
   display: flex;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -85,5 +106,16 @@ nav {
 
   .internalLinks {
     display: none; /* Oculta os elementos desnecessários no sidebar */
+  }
+
+  .navitens button {
+    position: absolute;
+    right: 2vw;
+    display: flex;
+  }
+
+  .theme-toggle:hover {
+    background-color: var(--background-color);
+    color: var(--accent-color);
   }
 }

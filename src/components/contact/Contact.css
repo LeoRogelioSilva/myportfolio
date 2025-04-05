@@ -1,0 +1,54 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  background-color: var(--background-color);
+}
+
+.contacts {
+  color: var(--accent-color);
+  justify-content: left;
+  margin: auto;
+  align-items: left;
+  text-align: left;
+  max-width: 40%;
+}
+
+.contacts h2 {
+  color: var(--accent-color);
+}
+
+.contacts h3 a {
+  color: #f60;
+}
+
+.contacts h1 {
+  color: #f60;
+}
+
+.photo {
+  display: flex;
+  margin-left: auto;
+  margin-right: 15%;
+  margin-top: 5%;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo img {
+  position: absolute;
+  bottom: 0;
+  width: 20vw;
+  right: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    max-width: 90%;
+  }
+}

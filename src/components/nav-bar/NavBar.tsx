@@ -2,8 +2,29 @@ import "./NavBar.css";
 import linkedin from "../../assets/images/linkedin.png";
 import github from "../../assets/images/github.png";
 import leoro from "../../assets/images/leoro.gif";
+import leorowhite from "../../assets/images/leorowhite.gif";
+import { useState } from "react";
 
 const NavBar: React.FC = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+
+    const root = document.documentElement;
+    if (isDarkMode) {
+      root.style.setProperty("--background-color", "#f8f8f8");
+      root.style.setProperty("--background-color-secondary", "#ddd");
+      root.style.setProperty("--text-color", "#111");
+      root.style.setProperty("--accent-color", "#f60");
+    } else {
+      root.style.setProperty("--background-color", "black");
+      root.style.setProperty("--background-color-secondary", "#111");
+      root.style.setProperty("--text-color", "#f8f8f8");
+      root.style.setProperty("--accent-color", "#f60");
+    }
+  };
+
   const socialLinks = [
     {
       name: "linkedin",
@@ -49,8 +70,11 @@ const NavBar: React.FC = () => {
             ))}
           </div>
           <div className="centerImage">
-            <img src={leoro} alt="Logo" />
+            <img src={isDarkMode ? leoro : leorowhite} alt="Logo" />
           </div>
+          <button onClick={toggleTheme} className="theme-toggle">
+            {isDarkMode ? "Light Mode" : "Dark Mode"}
+          </button>
           <div className="internalLinks">
             {internalLinks.map((link) => (
               <h2 key={link.name}>

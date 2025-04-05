@@ -7,7 +7,7 @@
 }
 
 .about {
-  color: white;
+  color: var(--text-color);
   justify-content: left;
   margin: auto;
   align-items: left;
@@ -16,11 +16,11 @@
 }
 
 .about h2 {
-  color: white;
+  color: var(--text-color);
 }
 
 .about h1 {
-  color: #f60;
+  color: var(--accent-color);
 }
 
 .photo {
@@ -50,7 +50,7 @@
     justify-content: center;
     margin-top: 5%;
   }
-  /* Ajuste o valor de 768px conforme necessário */
+
   .photo {
     display: flex;
     margin-left: auto;
@@ -59,10 +59,10 @@
     border-radius: 50%;
     width: 70vw;
     height: 70vw;
-    position: relative; /* Necessário para posicionar o ::after */
+    position: relative;
     display: inline-block;
-    width: 70vw; /* Ajusta conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 70vw;
+    height: auto;
     overflow: hidden;
   }
 
@@ -81,16 +81,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0)
-    ); /* Gradiente do topo para baixo */
-    pointer-events: none; /* Permite clicar na imagem sem interferência */
-    z-index: 1; /* Garante que a máscara esteja acima da imagem */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: 1;
   }
 
   .about {
-    max-width: 90%; /* Opcional: ajustar a largura do texto para ocupar mais espaço */
+    max-width: 90%;
   }
 }

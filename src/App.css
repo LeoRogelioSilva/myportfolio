@@ -1,3 +1,27 @@
+:root {
+  --background-color: black;
+  --background-color-secondary: #111;
+  --text-color: #f8f8f8;
+  --accent-color: #f60;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color-secondary);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .App {
   text-align: center;
 }
@@ -21,7 +45,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--accent-color);
 }
 
 .App-link {
