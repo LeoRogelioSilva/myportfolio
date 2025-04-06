@@ -72,9 +72,14 @@ const NavBar: React.FC = () => {
           <div className="centerImage">
             <img src={isDarkMode ? leoro : leorowhite} alt="Logo" />
           </div>
-          <button onClick={toggleTheme} className="theme-toggle">
-            {isDarkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+          <label className="switch">
+            <input
+              type="checkbox"
+              checked={isDarkMode}
+              onChange={toggleTheme}
+            />
+            <span className="slider" />
+          </label>
           <div className="internalLinks">
             {internalLinks.map((link) => (
               <h2 key={link.name}>
