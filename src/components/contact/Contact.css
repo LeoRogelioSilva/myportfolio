@@ -1,5 +1,4 @@
 .contact {
-  margin-top: 5%;
   padding: 10vh;
   background-color: var(--background-color);
 }
@@ -7,20 +6,17 @@
 .contacts {
   color: var(--accent-color);
   display: grid;
-  grid-template-columns: repeat(
-    12,
-    1fr
-  ); /* Define 12 colunas de tamanho igual */
-  gap: 1rem; /* Espaçamento entre as colunas */
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
   margin: auto;
-  text-align: center; /* Centraliza o texto dentro dos elementos */
-  justify-items: center; /* Centraliza os elementos horizontalmente em cada coluna */
-  align-items: center; /* Centraliza os elementos verticalmente em cada coluna */
+  text-align: center;
+  justify-items: center;
+  align-items: center;
   font-weight: 100;
 }
 
 .contacts div {
-  grid-column: span 3; /* Cada div ocupa 3 colunas */
+  grid-column: span 3;
 }
 
 .contacts h3 a {
@@ -42,6 +38,6 @@
   }
 
   .contacts div {
-    grid-column: span 12; /* Cada div ocupa 3 colunas */
+    grid-column: span 12;
   }
 }

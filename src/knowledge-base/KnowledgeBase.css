@@ -1,0 +1,11 @@
+.knowledge-base {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+  background: linear-gradient(
+    to bottom,
+    var(--background-color-secondary),
+    var(--background-color)
+  );
+}

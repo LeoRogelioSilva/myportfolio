@@ -1,0 +1,54 @@
+.knowledge-section {
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding-left: 1rem;
+  background-color: var(--background-color-secondary);
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+.toggle-button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.toggle-button:hover {
+  background-color: var(--accent-color-hover);
+  color: var(--accent-color);
+}
+
+.arrow-icon {
+  font-size: 0.6rem;
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.arrow-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.knowledge-content {
+  margin-top: 1rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.5;
+}

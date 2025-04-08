@@ -1,0 +1,29 @@
+.aboutme {
+  background: linear-gradient(
+    to bottom,
+    var(--background-color-secondary),
+    var(--background-color)
+  );
+}
+
+.aboutme a {
+  color: var(--text-color);
+}
+
+.aboutme a:hover {
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
+.aboutmetldr {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+p {
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+}

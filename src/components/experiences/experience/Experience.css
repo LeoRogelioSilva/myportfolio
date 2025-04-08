@@ -1,0 +1,47 @@
+.experience {
+  border: 0.2rem solid var(--accent-color);
+  border-radius: 10px;
+  width: 50vw;
+  padding: 1rem;
+  background-color: var(--background-color);
+}
+
+.experience:hover {
+  animation: fadeInLeftToRight 0.8s ease-out;
+  background-color: var(--background-color-secondary);
+  box-shadow: 0 0 5px var(--accent-color);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.experience h3 {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.experience h4 {
+  color: var(--text-color);
+  font-size: 0.7rem;
+}
+
+.experience p {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+}
+
+.datas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.start,
+.end {
+  border: 1px solid var(--accent-color);
+  border-radius: 51px;
+  padding: 0.2rem 0.5rem;
+  color: var(--text-color);
+  font-size: 0.7rem;
+}

@@ -4,7 +4,7 @@ import LinkCopyToClipboard from "../link-copy-to-clipboard/LinkCopyToClipBoard";
 
 const Contact: React.FC = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contactme">
         <h1>Contact Me</h1>
         <p>
