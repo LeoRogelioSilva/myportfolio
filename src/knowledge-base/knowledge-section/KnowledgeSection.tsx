@@ -31,7 +31,9 @@ const KnowledgeSection: React.FC<KnowledgeSectionProps> = ({
       {isExpanded && (
         <div className="knowledge-content">
           <p>{text}</p>
-          {children && <div className="nested-knowledge">{children}</div>}
+          <div className="children">
+            {children && <div className="nested-knowledge">{children}</div>}
+          </div>
         </div>
       )}
     </div>

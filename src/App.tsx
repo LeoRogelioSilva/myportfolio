@@ -5,6 +5,7 @@ import Profile from "./components/profile/Profile";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import Experiences from "./components/experiences/Experiences";
+import KnowledgeBase from "./knowledge-base/KnowledgeBase";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Profile></Profile>
       <About></About>
       <Experiences></Experiences>
+      <KnowledgeBase></KnowledgeBase>
       <Contact></Contact>
     </div>
   );
