@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { binary_search } from "./binary-search.algorithm";
-import "./BinarySearch.css";
 import Input from "../../../components/shared/input/Input";
 import Button from "../../../components/shared/button/Button";
 
