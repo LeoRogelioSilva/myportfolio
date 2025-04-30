@@ -18,7 +18,7 @@ const BinarySearchComponent: React.FC = () => {
       typeof target === "string" ? parseInt(target, 10) : target;
 
     const index = binary_search(numArray, targetNum);
-    setResult(index !== -1 ? `Found at index ${index}` : "Not found");
+    setResult(index !== -1 ? `Found at index ${index}` : "Not found :(");
   };
 
   return (

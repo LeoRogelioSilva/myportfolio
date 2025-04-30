@@ -19,7 +19,7 @@ const KnowledgeBase: React.FC = () => {
       <h1>Base de conhecimento</h1>
       <KnowledgeSection
         title="Data Structure"
-        text="Some important data structures implemented using typescript."
+        text="Some important data structures implemented using typescript!"
         children={[<BinarySearchComponent />]}
       ></KnowledgeSection>
       {knowledgeSections.map((section, index) => (

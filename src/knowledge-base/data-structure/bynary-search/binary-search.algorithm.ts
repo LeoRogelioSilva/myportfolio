@@ -7,7 +7,7 @@ export const binary_search = (nums: number[], n: number) => {
     steps++;
     let mid = Math.floor((low + high) / 2);
     if (nums[mid] === n) {
-      console.log(`Found ${n} in ${steps} steps`);
+      console.log(`Found ${n} in ${steps} steps!`);
       return mid;
     }
     if (nums[mid] < n) {
