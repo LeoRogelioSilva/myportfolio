@@ -8,7 +8,11 @@ export class BuildKnowledgeBaseService {
   }
 
   buildKnowledgeBase() {
-    const b = knowledgeBase.map((knowledge) => {
+    if (this.knowledgeBase.length === 0) {
+      this.knowledgeBase = [];
+      return;
+    }
+    const b = knowledgeBase.map((knowledge: Knowledge) => {
       return {
         title: knowledge.title,
         text: knowledge.text,
