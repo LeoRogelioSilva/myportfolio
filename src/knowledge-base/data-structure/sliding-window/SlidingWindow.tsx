@@ -45,7 +45,7 @@ const SlidingWindowComponent: React.FC = () => {
       </p>
       <p>
         <b>Descrição: </b>É uma busca de substrings dada uma regra, nesse caso a
-        regra é ter no máximo 1 repetição de um mesmo caractere.
+        regra é ter no máximo 2 repetição de um mesmo caractere.
       </p>
       <div>
         <label>
