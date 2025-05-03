@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./KnowledgeBase.css";
 import KnowledgeSection from "./knowledge-section/KnowledgeSection";
 import { BuildKnowledgeBaseService } from "./services/build-knowledge-base.service";
-import BinarySearchComponent from "./data-structure/bynary-search/BinarySearch";
+import BinarySearchComponent from "./data-structure/binary-search/BinarySearch";
+import SlidingWindowComponent from "./data-structure/sliding-window/SlidingWindow";
+import ExponentialSearchComponent from "./data-structure/exponential-search/ExponentialSearch";
 
 const KnowledgeBase: React.FC = () => {
   const [knowledgeSections, setKnowledgeSections] = useState<any[]>([]);
@@ -18,9 +20,16 @@ const KnowledgeBase: React.FC = () => {
     <div className="knowledge-base">
       <h1>Base de conhecimento</h1>
       <KnowledgeSection
-        title="Data Structure"
-        text="Some important data structures implemented using typescript!"
-        children={[<BinarySearchComponent />]}
+        title="Algorithms"
+        text="Some important Algorithms implemented using typescript!"
+        children={[
+          <BinarySearchComponent />,
+          <hr />,
+          <SlidingWindowComponent />,
+          <hr />,
+          <ExponentialSearchComponent />,
+          <hr />,
+        ]}
       ></KnowledgeSection>
       {knowledgeSections.map((section, index) => (
         <KnowledgeSection

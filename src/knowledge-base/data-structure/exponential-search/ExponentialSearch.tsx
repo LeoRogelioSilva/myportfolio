@@ -1,13 +1,30 @@
 import React, { useState } from "react";
-import { binary_search } from "./binary-search.algorithm";
 import Input from "../../../components/shared/input/Input";
 import Button from "../../../components/shared/button/Button";
+import { exponential_search } from "./exponential-search.algorithm";
+import Code from "../../../components/shared/code/Code";
 
-const BinarySearchComponent: React.FC = () => {
+const ExponentialSearchComponent: React.FC = () => {
   const [array, setArray] = useState<string>("");
   const [target, setTarget] = useState<number | "">("");
   const [result, setResult] = useState<string>("");
-
+  const code = `export const exponential_search = (arr: number[], target: number) => {
+    if (arr[0] === target) return 0;
+    let n = arr.length;
+    let i = 1;
+    while (i < n && arr[i] < target) {
+      i *= 2;
+    }
+    if (arr[i] === target) return i;
+    console.log(i);
+    console.log(
+      binary_search(arr.slice(Math.floor(i / 2), Math.min(i, n - 1)), target)
+    );
+  
+    return binary_search(arr, target, Math.floor(i / 2), Math.min(i, n - 1))!;
+  };
+  
+  `;
   const handleSearch = () => {
     const numArray = array
       .split(",")
@@ -16,15 +33,19 @@ const BinarySearchComponent: React.FC = () => {
     const targetNum =
       typeof target === "string" ? parseInt(target, 10) : target;
 
-    const index = binary_search(numArray, targetNum);
+    const index = exponential_search(numArray, targetNum);
     setResult(index !== -1 ? `Found at index ${index}` : "Not found :(");
   };
 
   return (
     <div>
-      <h1>Binary Search</h1>
+      <h1>Exponential Search</h1>
       <p>
         <b>Complexidade: </b>O(log(n))
+      </p>
+      <p>
+        <b>Descrição: </b>É uma busca em uma lista de elementos ordenados em que
+        a distribuição dos elementos é maior.
       </p>
       <div>
         <label>
@@ -54,8 +75,9 @@ const BinarySearchComponent: React.FC = () => {
       <div>
         <strong>Result:</strong> {result}
       </div>
+      <Code code={code}></Code>
     </div>
   );
 };
 
-export default BinarySearchComponent;
+export default ExponentialSearchComponent;

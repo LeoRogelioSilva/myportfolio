@@ -3,27 +3,10 @@ import linkedin from "../../assets/images/linkedin.png";
 import github from "../../assets/images/github.png";
 import leoro from "../../assets/images/leoro.gif";
 import leorowhite from "../../assets/images/leorowhite.gif";
-import { useState } from "react";
+import { useTheme } from "../ThemeContext";
 
 const NavBar: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.style.setProperty("--background-color", "#f8f8f8");
-      root.style.setProperty("--background-color-secondary", "#ddd");
-      root.style.setProperty("--text-color", "#111");
-      root.style.setProperty("--accent-color", "#f60");
-    } else {
-      root.style.setProperty("--background-color", "black");
-      root.style.setProperty("--background-color-secondary", "#111");
-      root.style.setProperty("--text-color", "#f8f8f8");
-      root.style.setProperty("--accent-color", "#f60");
-    }
-  };
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const socialLinks = [
     {

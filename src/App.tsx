@@ -6,17 +6,20 @@ import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
 import Experiences from "./components/experiences/Experiences";
 import KnowledgeBase from "./knowledge-base/KnowledgeBase";
+import { ThemeProvider } from "./components/ThemeContext";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <Profile></Profile>
-      <About></About>
-      <Experiences></Experiences>
-      <KnowledgeBase></KnowledgeBase>
-      <Contact></Contact>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <NavBar></NavBar>
+        <Profile></Profile>
+        <About></About>
+        <Experiences></Experiences>
+        <KnowledgeBase></KnowledgeBase>
+        <Contact></Contact>
+      </div>
+    </ThemeProvider>
   );
 };
 
