@@ -1,8 +1,7 @@
 import "./NavBar.css";
-import linkedin from "../../assets/images/linkedin.png";
-import github from "../../assets/images/github.png";
-import leoro from "../../assets/images/leoro.gif";
-import leorowhite from "../../assets/images/leorowhite.gif";
+import linkedin from "../../assets/images/linkedin.svg";
+import github from "../../assets/images/github.svg";
+import leoro from "../../assets/images/leorogelio.gif";
 import { useTheme } from "../ThemeContext";
 
 const NavBar: React.FC = () => {
@@ -53,7 +52,7 @@ const NavBar: React.FC = () => {
             ))}
           </div>
           <div className="centerImage">
-            <img src={isDarkMode ? leoro : leorowhite} alt="Logo" />
+            <img src={leoro} alt="Logo" />
           </div>
           <label className="switch">
             <input

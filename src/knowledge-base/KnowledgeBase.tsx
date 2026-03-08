@@ -5,6 +5,8 @@ import { BuildKnowledgeBaseService } from "./services/build-knowledge-base.servi
 import BinarySearchComponent from "./data-structure/binary-search/BinarySearch";
 import SlidingWindowComponent from "./data-structure/sliding-window/SlidingWindow";
 import ExponentialSearchComponent from "./data-structure/exponential-search/ExponentialSearch";
+import BubbleSortComponent from "./data-structure/sort/bubble-sort/BubbleSort";
+import QuickSortComponent from "./data-structure/sort/quick-sort/QuickSort";
 
 const KnowledgeBase: React.FC = () => {
   const [knowledgeSections, setKnowledgeSections] = useState<any[]>([]);
@@ -29,6 +31,9 @@ const KnowledgeBase: React.FC = () => {
           <hr />,
           <ExponentialSearchComponent />,
           <hr />,
+          <BubbleSortComponent />,
+          <hr />,
+          <QuickSortComponent />,
         ]}
       ></KnowledgeSection>
       {knowledgeSections.map((section, index) => (

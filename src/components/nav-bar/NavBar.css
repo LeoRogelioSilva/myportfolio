@@ -18,9 +18,41 @@ nav {
 }
 .socialLinks a {
   margin: 0.4rem;
-}
-.socialLinks a img {
+  display: inline-block;
   width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+.socialLinks a img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.socialLinks a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: filter 0.3s ease;
+}
+
+.socialLinks a[href*="linkedin"]::before {
+  mask-image: url("../../assets/images/linkedin.svg");
+}
+
+.socialLinks a[href*="github"]::before {
+  mask-image: url("../../assets/images/github.svg");
+}
+
+.socialLinks a:hover::before {
+  filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
 .centerImage {
