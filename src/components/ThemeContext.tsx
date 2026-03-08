@@ -18,12 +18,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
       root.style.setProperty("--background-color", "black");
       root.style.setProperty("--background-color-secondary", "#111");
       root.style.setProperty("--text-color", "#f8f8f8");
-      root.style.setProperty("--accent-color", "#f60");
+      root.style.setProperty("--accent-color", "#2f77e4");
     } else {
       root.style.setProperty("--background-color", "#f8f8f8");
       root.style.setProperty("--background-color-secondary", "#ddd");
       root.style.setProperty("--text-color", "#111");
-      root.style.setProperty("--accent-color", "#f60");
+      root.style.setProperty("--accent-color", "#2f77e4");
     }
   }, [isDarkMode]);
 
